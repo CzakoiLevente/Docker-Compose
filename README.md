@@ -60,32 +60,32 @@ const connection = mariadb.createConnection({ <br>
   port: 3306 <br>
 });
 
-...just to see all these godly important notes where to set...
+...just to see how connection to DB looks like in server.js...
 
 
 ```
 IMPORTANT NOTES:
 
-Docker uses cache. Don't let that fuck you in the ass! 
-If theres is shit going on, rebuild your app, but boefre rebuild, 
-try just to stop the containers and start again a few times to force Docker to let go of his shit.
+Docker uses cache. Don't let that trick you! 
+If theres is hickup going on, rebuild your app, but before rebuild, 
+try just to stop the containers and start again a few times to force Docker to let go of his cached data.
 
 ```
 
-[...knock yourself out with this](https://stackoverflow.com/questions/32612650/how-to-get-docker-compose-to-always-re-create-containers-from-fresh-images)
+[caches data source](https://stackoverflow.com/questions/32612650/how-to-get-docker-compose-to-always-re-create-containers-from-fresh-images)
 
 <br>
 
 ## db access in compose
 
 
-1) get into container's bash:
+1) to get into container's bash:
 
 ```
 $ docker exec -ti macrotis-database /bin/bash 
 ```
 
-2) get into maridb as root user
+2) to get into maridb as root user
 
 ```
 $ mysql -u root -p
@@ -99,7 +99,6 @@ $ mysql -u root -p
   so if u use build and use sql file to create/populate table, BE SURE that at that point the db itself will exist
   - dont use volume to use sql file to populate/create if u already using build, 
   and it contains dockerfile with entry to ADD/COPY that file
-  - 
   
   
   
