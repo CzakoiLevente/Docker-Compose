@@ -5,6 +5,23 @@ NodeJs server and Web application linked to MariaDB in separate containers.
 
 <br>
 
+### Features
+
+#### Application
+
+  - store attractions with correspondent informations
+  - edit stored data
+  - create new attractions
+
+<br>
+
+#### Database
+
+  - DB can store and retrieve stored data after rebuilding a container
+
+
+<br>
+
 ## docker-compose.yml
 
 2 Services = 2 Containers
