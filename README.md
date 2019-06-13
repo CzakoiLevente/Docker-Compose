@@ -12,12 +12,14 @@ NodeJs server and Web application linked to MariaDB in separate containers.
   - store attractions with correspondent informations
   - edit stored data
   - create new attractions
-
+  
 <br>
 
-#### Database
+#### Tech spec
 
   - DB can store and retrieve stored data after rebuilding a container
+  - validation used in HTML and BackEnd
+
 
 
 <br>
