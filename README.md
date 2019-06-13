@@ -93,7 +93,7 @@ try just to stop the containers and start again a few times to force Docker to l
 
 <br>
 
-## db access in compose
+## Access DB in the running container
 
 
 1) to get into container's bash:
@@ -109,6 +109,7 @@ $ mysql -u root -p
 
 ```
 
+<br>
 
 ## Other notes as takeaways
 
