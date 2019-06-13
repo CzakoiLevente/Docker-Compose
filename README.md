@@ -52,13 +52,12 @@ IMPORTANT NOTES!
 
 **db connection**
 
-const connection = mariadb.createConnection({
-
-  host: 'compose_database',
-  user: 'exampleUser',
-  password: 'password',
-  database: 'hellodb',
-  port: 3306
+const connection = mariadb.createConnection({ <br>
+  host: 'compose_database', <br>
+  user: 'exampleUser', <br>
+  password: 'password', <br>
+  database: 'hellodb', <br>
+  port: 3306 <br>
 });
 
 ...just to see all these godly important notes where to set...
