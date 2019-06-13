@@ -84,7 +84,7 @@ const connection = mariadb.createConnection({ <br>
 ...just to see how connection to DB looks like in server.js...
 
 
-```
+```javascript
 IMPORTANT NOTES:
 
 Docker uses cache. Don't let that trick you! 
