@@ -17,12 +17,7 @@ export function fieldContentCheck(object) {
   }
 }
 
-
-// all keys present
-// keys type adequate
-
-
-function checkString(object, key) {
+export function checkString(object, key) {
   let value = object[key];
   if (!key in object || value === '' || !value instanceof String) {
     return false;
@@ -30,19 +25,16 @@ function checkString(object, key) {
   return true;
 }
 
-
-function checkInt(object, key) {
+export function checkInt(object, key) {
   if (!key in object || object[key] === '') {
     return false;
   }
   return true;
 }
 
-/*
-function checkFloat(object, key) {
+export function checkFloat(object, key) {
   if (!key in object  || object[key] === '') {
     return false;
   }
   return true;
 }
- */
