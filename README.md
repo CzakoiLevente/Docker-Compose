@@ -51,7 +51,7 @@ NodeJs server and Web application linked to MariaDB in separate containers.
   - ports: sets and publishes the ports
   - depends_on: it won't tell `docker-compose up` to start it before the other container
 
-```
+```javascript
 IMPORTANT NOTES!
 
  - create ROOT USER PASSWORD during the build process of the database
@@ -84,7 +84,7 @@ const connection = mariadb.createConnection({ <br>
 ...just to see how connection to DB looks like in server.js...
 
 
-```
+```javascript
 IMPORTANT NOTES:
 
 Docker uses cache. Don't let that trick you! 
