@@ -1,13 +1,13 @@
 'use strict';
 
-let http = new XMLHttpRequest;
-let body = document.querySelector('.table-container');
-let tBody = document.getElementsByTagName('tbody')[0];
-let tableBody = document.querySelector('.table-body');
-let table = document.querySelector('table');
-let buttonSend = document.querySelector('.send');
-let form = document.querySelector('form-container');
-let columns = ['attr_name', 'city', 'category', 'price', 'longitude', 'lattitude', 'recommended_age', 'duration'];
+const http = new XMLHttpRequest;
+const body = document.querySelector('.table-container');
+const tBody = document.getElementsByTagName('tbody')[0];
+const tableBody = document.querySelector('.table-body');
+const table = document.querySelector('table');
+const buttonSend = document.querySelector('.send');
+const form = document.querySelector('form-container');
+const columns = ['attr_name', 'city', 'category', 'price', 'longitude', 'lattitude', 'recommended_age', 'duration'];
 
 function fillTable(data) {
   for (let i = 0; i < data.length; i++) { //row
