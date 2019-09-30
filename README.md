@@ -139,6 +139,8 @@ $ env | grep -i user
 $ env | grep -i password
 ```
 
+[source](https://github.com/docker-library/mysql/issues/557)
+
 <br>
 
 ## Check users and passwords in DB
