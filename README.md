@@ -97,6 +97,20 @@ try just to stop the containers and start again a few times to force Docker to l
 
 <br>
 
+## Other notes as takeaways
+
+  - in yml if u create database, it will happen after build/image section.
+  so if u use build and use sql file to create/populate table, BE SURE that at that point the db itself will exist
+  - dont use volume to use sql file to populate/create if u already using build, 
+  and it contains dockerfile with entry to ADD/COPY that file
+  
+  
+  <br>
+  
+# Debugging
+
+<br>
+
 ## Access DB in the running container
 
 
@@ -106,7 +120,7 @@ try just to stop the containers and start again a few times to force Docker to l
 $ docker exec -ti macrotis-database /bin/bash 
 ```
 
-2) to get into maridb as root user
+2) to get into maridb as ` root ` user (this will ask for credentials)
 
 ```
 $ mysql -u root -p
@@ -115,12 +129,28 @@ $ mysql -u root -p
 
 <br>
 
-## Other notes as takeaways
+## Check environment variables set by yml
 
-  - in yml if u create database, it will happen after build/image section.
-  so if u use build and use sql file to create/populate table, BE SURE that at that point the db itself will exist
-  - dont use volume to use sql file to populate/create if u already using build, 
-  and it contains dockerfile with entry to ADD/COPY that file
-  
-  
-  
+```
+$ docker exec -ti macrotis-database /bin/bash 
+
+$ env | grep -i user
+
+$ env | grep -i password
+```
+
+<br>
+
+## Check users and passwords in DB
+
+```
+$ docker exec -ti macrotis-database /bin/bash 
+
+$ mysql -u root
+
+SQL $ SELECT User, Host, Password FROM mysql.user;
+
+```
+
+<br>
+
