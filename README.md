@@ -156,3 +156,8 @@ SQL $ SELECT User, Host, Password FROM mysql.user;
 
 <br>
 
+## Check conatiner logs
+
+```
+$ docker logs <container_name>
+```
